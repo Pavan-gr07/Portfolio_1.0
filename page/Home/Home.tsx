@@ -1,10 +1,10 @@
 import React from 'react'
 import { Navbar } from '@/components/custom/Navbar/index'
+import Container from '@/components/custom/Container'
 export const Home = () => {
     return (
-        <div>
+        <Container>
             <Navbar/>
-            <h1>Portfolio</h1>
-        </div>
+        </Container>
     )
 }
