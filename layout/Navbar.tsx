@@ -18,26 +18,26 @@ export const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
-    // useEffect(() => {
-    //     const onScroll = () => {
-    //         if (window.scrollY > 50) {
-    //             setScrolled(true);
-    //         } else {
-    //             setScrolled(false);
-    //         }
-    //     }
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        }
 
-    //     window.addEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScroll);
 
-    //     return () => window.removeEventListener("scroll", onScroll);
-    // }, [])
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [])
 
     const onUpdateActiveLink = (value: string): void => {
         setActiveLink(value);
     };
 
     return (
-        <div className="bg-black/0  fixed w-full top-0 left-0 z-50 py-5">
+        <div className={`bg-black/0  fixed w-full top-0 left-0 z-50 py-5 ${scrolled ? "bg-black/80" : ""}`} >
             <Container>
                 <div className="flex justify-between  bg-red items-center relative">
                     <a href="/" className="w-[9%]">
@@ -82,7 +82,7 @@ export const Navbar = () => {
 
                     {/* Mobile Menu (Dropdown Below Navbar) */}
                     <div
-                        className={`lg:hidden text-white absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+                        className={`lg:hidden text-white absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[300px] bg-black opacity-100' : 'max-h-0 opacity-0'
                             }`}
                     >
                         <ul className="flex flex-col items-center space-y-4 py-4">

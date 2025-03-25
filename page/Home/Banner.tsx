@@ -56,7 +56,7 @@ export const Banner = () => {
         >
             <Container>
                 <section
-                    className="banner w-full min-h-screen flex items-center from-gray-900 to-gray-800 px-6 "
+                    className="banner w-full min-h-screen flex items-center from-gray-900 to-gray-800 px-6 pt-10"
                     id="home"
                 >
                     <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -83,6 +83,20 @@ export const Banner = () => {
                         </div>
 
 
+                        {/* <div className="flex justify-center md:justify-end overflow-hidden">
+                            <motion.img
+                                src={photo.src}
+                                alt="Header Img"
+                                className="drop-shadow-lg w-auto h-[400px] rounded-full md:h-[400px] lg:h-[600px] object-cover"
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1, }}
+                                transition={{
+                                    type: "spring",
+                                    damping: 10,
+                                    ease: "easeInOut",
+                                }}
+                            />
+                        </div> */}
                         <div className="flex justify-center md:justify-end">
                             <motion.img
                                 src={photo.src}
@@ -98,6 +112,10 @@ export const Banner = () => {
                                 }}
                             />
                         </div>
+
+
+
+
                     </div>
                 </section>
             </Container>
