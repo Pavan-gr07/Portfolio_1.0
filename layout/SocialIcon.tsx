@@ -3,11 +3,12 @@ import Image from "next/image";
 interface SocialIconProps {
     src: string;
     alt: string;
+    link: string;
 }
 
-const SocialIcon: React.FC<SocialIconProps> = ({ src, alt }) => {
+const SocialIcon: React.FC<SocialIconProps> = ({ src, alt, link }) => {
     return (
-        <a href="#" className="w-[42px] h-[42px] border flex items-center justify-center rounded-full group relative overflow-hidden bg-rgba(217, 217, 217, 0.1);">
+        <a href={link} target="_blank" className="w-[42px] h-[42px] border flex items-center justify-center rounded-full group relative overflow-hidden bg-rgba(217, 217, 217, 0.1);">
             {/* Background Hover Effect */}
             <span className="absolute w-[42px] h-[42px] bg-white rounded-full scale-0 transition-transform duration-300 ease-in-out group-hover:scale-100"></span>
 

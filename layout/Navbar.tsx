@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon2 from "../assets/skills-icons/github.svg";
+import navIcon3 from "../assets/skills-icons/leetcode.svg";
 import { Menu, X } from "lucide-react";
 import { Button } from '../components/ui/button';
 import SocialIcon from './SocialIcon';
@@ -67,9 +67,9 @@ export const Navbar = () => {
                         </ul>
 
                         <div className="flex space-x-3">
-                            <SocialIcon src={navIcon1} alt="linkedIn" />
-                            <SocialIcon src={navIcon2} alt="facebook" />
-                            <SocialIcon src={navIcon3} alt="Leetcode" />
+                            <SocialIcon src={navIcon1} alt="linkedIn" link="https://www.linkedin.com/in/pavangr2001/" />
+                            <SocialIcon src={navIcon2} alt="github" link="https://github.com/Pavan-gr07" />
+                            <SocialIcon src={navIcon3} alt="Leetcode" link="https://leetcode.com/u/pavangr_07/" />
                         </div>
 
                         <Button className="relative overflow-hidden border rounded-none p-7 cursor-pointer text-white group">
@@ -104,9 +104,9 @@ export const Navbar = () => {
                         </ul>
 
                         <div className="flex justify-center space-x-3 py-4">
-                            <SocialIcon src={navIcon1} alt="linkedIn" />
-                            <SocialIcon src={navIcon2} alt="facebook" />
-                            <SocialIcon src={navIcon3} alt="Leetcode" />
+                            <SocialIcon src={navIcon1} alt="linkedIn" link="https://www.linkedin.com/in/pavangr2001/" />
+                            <SocialIcon src={navIcon2} alt="github" link="https://github.com/Pavan-gr07" />
+                            <SocialIcon src={navIcon3} alt="Leetcode" link="https://leetcode.com/u/pavangr_07/" />
                         </div>
 
                         <div className="flex justify-center pb-4">
