@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/grs_logo.svg" sizes="any" />
-      <body style={{background:"#0D0D0D",color:"white"}}>
+      <body style={{ background: "#0D0D0D", color: "white" }}>
         <Theme>
           {children}
         </Theme>
