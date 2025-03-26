@@ -78,3 +78,8 @@ body{
   background: "#0D0D0D";
   letter-spacing: 0.1rem
 };
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
