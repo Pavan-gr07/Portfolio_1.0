@@ -111,7 +111,7 @@ export const Navbar = () => {
             }`}
           >
             <ul className="flex flex-col items-center space-y-4 py-4">
-              {["home", "skills", "projects"].map((link) => (
+              {["home", "skills", "projects", "experience"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link}`}
