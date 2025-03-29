@@ -1,30 +1,62 @@
+"use client"; // Ensure this runs only on the client side
+
+import dynamic from "next/dynamic";
 import Container from "@/components/custom/Container";
 import ProjectsCard from "@/components/custom/ProjectsCard";
-import SkillsCard from "@/components/custom/SkillsCard";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { skills } from "@/data";
 
-export default function Projects() {
-    return (
-        <div className="bg-black pt-20" id="projects">
-            <Container>
-                <div className='bg-black/60  rounded-3xl dark:bg-slate-800 p-2 sm:p-10 mt-10  sm:-mt-15' id="skills">
-                    <div className='flex flex-col justify-center items-center font-bold gap-2'>
-                        <h2 className='text-3xl '>Projects</h2>
-                        <div className="text-gray-400 mt-4 max-w-4xl">
-                            <p className="text-gray-400 mt-4">
-                                A collection of impactful projects showcasing expertise in frontend and backend development, API integrations, cloud computing, and performance optimization. These projects highlight problem-solving skills, scalability, and a user-centric approach in building innovative and efficient solutions.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2 p-1 sm:grid-cols-3 gap-2 p-1 md:grid-cols-6 sm:gap-4 sm:p-2">
-                            {/* <ProjectsCard img="" name="" />
-                            <ProjectsCard img="" name="" />
-                            <ProjectsCard img="" name="" />
-                            <ProjectsCard img="" name="" /> */}
-                        </div>
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-                    </div>
-                </div>
-            </Container>
+const settings = {
+  dots: true,
+  infinite: false,
+  speed: 0,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+    { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+  ],
+};
+
+export default function Projects() {
+  return (
+    <div className="bg-black pt-20" id="projects">
+      <Container>
+        <div
+          className="bg-black/60 rounded-3xl dark:bg-slate-800 p-2 sm:p-10 mt-10 sm:-mt-15"
+          id="skills"
+        >
+          <div className="flex flex-col justify-center items-center font-bold gap-2">
+            <h2 className="text-3xl">Projects</h2>
+            <div className="text-gray-400 mt-4 max-w-4xl">
+              <p className="text-gray-400 mt-4">
+                A collection of impactful projects showcasing expertise in
+                frontend and backend development, API integrations, cloud
+                computing, and performance optimization.
+              </p>
+            </div>
+          </div>
         </div>
-    )
+        <Slider {...settings}>
+          {skills.map((data, i) => (
+            <div key={i} className="px-2 flex justify-center">
+              <ProjectsCard img={data.image.src} name={`Project ${i + 1}`} />
+            </div>
+          ))}
+        </Slider>
+      </Container>
+    </div>
+  );
 }

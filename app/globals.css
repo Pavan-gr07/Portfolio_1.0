@@ -83,3 +83,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
+.slick-slide > div {
+  display: flex !important;
+  justify-content: center;
+}
