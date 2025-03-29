@@ -6,6 +6,7 @@ import { Skills } from "./Skills";
 import Projects from "./Projects";
 import ChatSection from "@/components/custom/chat";
 import { Experience } from "./Experience";
+import Contact from "./Contact";
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
       <Projects />
       <ChatSection />
       <Experience />
+      <Contact />
     </>
   );
 };
