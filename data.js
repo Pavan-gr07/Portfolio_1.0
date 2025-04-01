@@ -21,6 +21,10 @@ import firebase from "@/assets/skills-icons/firebase.png";
 import dart from "@/assets/skills-icons/dart.png";
 import { Briefcase, Code, Server, Rocket } from "lucide-react";
 
+
+
+import blog from "@/assets/projects/blog-app1.png"
+
 export const skills = [
   {
     id: 1,
@@ -230,8 +234,9 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    image: aws,
-    name: "AWS",
+    image: blog,
+    name: "Blog app",
+    description: "Using EJS templates and Node.js, hosted on AWS",
     link: "https://aws.amazon.com/",
   },
   {

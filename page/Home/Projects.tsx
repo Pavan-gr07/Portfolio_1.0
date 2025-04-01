@@ -52,7 +52,7 @@ export default function Projects() {
         <Slider {...settings}>
           {projects.map((data, i) => (
             <div key={i} className="px-2 flex justify-center">
-              <ProjectsCard img={data.image.src} name={`Project ${i + 1}`} />
+              <ProjectsCard img={data.image.src} name={data?.name} description={data?.description} />
             </div>
           ))}
         </Slider>
