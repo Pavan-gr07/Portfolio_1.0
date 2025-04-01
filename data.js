@@ -7,12 +7,12 @@ import javascript from "@/assets/skills-icons/java-script.png";
 import java from "@/assets/skills-icons/java.png";
 import mongo from "@/assets/skills-icons/mongo.png";
 import mysql from "@/assets/skills-icons/mysql.png";
-import react from "/assets/skills-icons/react.png";
+import react from "@/assets/skills-icons/react.png";
 import flutter from "@/assets/skills-icons/flutter.png";
 import python from "@/assets/skills-icons/python.png";
-import typescript from "/assets/skills-icons/typescript.png";
+import typescript from "@/assets/skills-icons/typescript.png";
 import nextjs from "@/assets/skills-icons/next.png";
-import redux from "/assets/skills-icons/redux.png";
+import redux from "@/assets/skills-icons/redux.png";
 import jquery from "@/assets/skills-icons/jquery.png";
 import nodejs from "@/assets/skills-icons/nodejs.jpg";
 import git from "@/assets/skills-icons/git.png";
@@ -225,4 +225,44 @@ export const experiences = [
     icon: <Server className="text-purple-400" size={24} />,
     tags: ["React.js", "Redux", "REST APIs", "JavaScript", "HTML", "CSS"],
   },
+];
+
+export const projects = [
+  {
+    id: 1,
+    image: aws,
+    name: "AWS",
+    link: "https://aws.amazon.com/",
+  },
+  {
+    id: 2,
+    image: angular,
+    name: "Angular",
+    link: "https://angular.dev/overview",
+  },
+  {
+    id: 3,
+    image: bootstrap,
+    name: "Bootstrap",
+    link: "https://getbootstrap.com/",
+  },
+  {
+    id: 4,
+    image: docker,
+    name: "Docker",
+    link: "https://www.docker.com/",
+  },
+  {
+    id: 5,
+    image: html,
+    name: "HTML",
+    link: "https://www.w3schools.com/html/",
+  },
+  {
+    id: 6,
+    image: javascript,
+    name: "Java Script",
+    link: "https://www.w3schools.com/js/",
+  },
+
 ];

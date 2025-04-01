@@ -5,7 +5,7 @@ import Container from "@/components/custom/Container";
 import ProjectsCard from "@/components/custom/ProjectsCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { skills } from "@/data";
+import { projects } from "@/data";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -50,7 +50,7 @@ export default function Projects() {
           </div>
         </div>
         <Slider {...settings}>
-          {skills.map((data, i) => (
+          {projects.map((data, i) => (
             <div key={i} className="px-2 flex justify-center">
               <ProjectsCard img={data.image.src} name={`Project ${i + 1}`} />
             </div>

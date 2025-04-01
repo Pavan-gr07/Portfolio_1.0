@@ -38,9 +38,8 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`bg-black/0  fixed w-full top-0 left-0 z-50 py-5 ${
-        scrolled ? "bg-black/80" : ""
-      }`}
+      className={`bg-black/0  fixed w-full top-0 left-0 z-50 py-5 ${scrolled ? "bg-black/80" : ""
+        }`}
     >
       <Container>
         <div className="flex justify-between  bg-red items-center relative">
@@ -63,11 +62,10 @@ export const Navbar = () => {
                 <li key={link}>
                   <a
                     href={`#${link}`}
-                    className={`text-lg navbar-link ${
-                      activeLink === link
+                    className={`text-lg navbar-link ${activeLink === link
                         ? "active text-white font-semibold"
                         : "text-gray-400 font-medium"
-                    } hover:text-white transition duration-200`}
+                      } hover:text-white transition duration-200`}
                     onClick={() => onUpdateActiveLink(link)}
                   >
                     {link.charAt(0).toUpperCase() + link.slice(1)}
@@ -104,25 +102,23 @@ export const Navbar = () => {
 
           {/* Mobile Menu (Dropdown Below Navbar) */}
           <div
-            className={`lg:hidden text-white absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden ${
-              isOpen
+            className={`lg:hidden text-white absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden ${isOpen
                 ? "max-h-[300px] bg-black opacity-100"
                 : "max-h-0 opacity-0"
-            }`}
+              }`}
           >
             <ul className="flex flex-col items-center space-y-4 py-4">
               {["home", "skills", "projects", "experience"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link}`}
-                    className={`text-lg navbar-link ${
-                      activeLink === link
+                    className={`text-lg navbar-link ${activeLink === link
                         ? "active text-white font-semibold"
                         : "text-gray-400 font-medium"
-                    } hover:text-white transition duration-200`}
+                      } hover:text-white transition duration-200`}
                     onClick={() => {
                       onUpdateActiveLink(link);
-                      setIsOpen(false); // Close menu on click
+                      setIsOpen(false);
                     }}
                   >
                     {link.charAt(0).toUpperCase() + link.slice(1)}
