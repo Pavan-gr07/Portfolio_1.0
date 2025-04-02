@@ -44,7 +44,7 @@ export const Navbar = () => {
       <Container>
         <div className="flex justify-between  bg-red items-center relative">
           <a href="/" className="w-[9%]">
-            <img src="/logo.svg" alt="Logo" className="w-full h-auto" />
+            <img src="/grs.png" alt="Logo" className="w-full h-auto" />
           </a>
 
           {/* Mobile Toggle Button */}
@@ -92,7 +92,9 @@ export const Navbar = () => {
               />
             </div>
 
-            <Button className="relative overflow-hidden border rounded-none p-7 cursor-pointer text-white group" onClick={() => (window.location.hash = "#contact")}>
+            <Button className="relative overflow-hidden border rounded-none p-7 cursor-pointer text-white group" onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}>
               <span className="relative z-10 group-hover:text-black transition-colors duration-200 text-xl font-bold">
                 Let's Connect
               </span>
