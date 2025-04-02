@@ -63,8 +63,8 @@ export const Navbar = () => {
                   <a
                     href={`#${link}`}
                     className={`text-lg navbar-link ${activeLink === link
-                        ? "active text-white font-semibold"
-                        : "text-gray-400 font-medium"
+                      ? "active text-white font-semibold"
+                      : "text-gray-400 font-medium"
                       } hover:text-white transition duration-200`}
                     onClick={() => onUpdateActiveLink(link)}
                   >
@@ -92,7 +92,7 @@ export const Navbar = () => {
               />
             </div>
 
-            <Button className="relative overflow-hidden border rounded-none p-7 cursor-pointer text-white group">
+            <Button className="relative overflow-hidden border rounded-none p-7 cursor-pointer text-white group" onClick={() => (window.location.hash = "#contact")}>
               <span className="relative z-10 group-hover:text-black transition-colors duration-200 text-xl font-bold">
                 Let's Connect
               </span>
@@ -103,8 +103,8 @@ export const Navbar = () => {
           {/* Mobile Menu (Dropdown Below Navbar) */}
           <div
             className={`lg:hidden text-white absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden ${isOpen
-                ? "max-h-[300px] bg-black opacity-100"
-                : "max-h-0 opacity-0"
+              ? "max-h-[300px] bg-black opacity-100"
+              : "max-h-0 opacity-0"
               }`}
           >
             <ul className="flex flex-col items-center space-y-4 py-4">
@@ -113,8 +113,8 @@ export const Navbar = () => {
                   <a
                     href={`#${link}`}
                     className={`text-lg navbar-link ${activeLink === link
-                        ? "active text-white font-semibold"
-                        : "text-gray-400 font-medium"
+                      ? "active text-white font-semibold"
+                      : "text-gray-400 font-medium"
                       } hover:text-white transition duration-200`}
                     onClick={() => {
                       onUpdateActiveLink(link);

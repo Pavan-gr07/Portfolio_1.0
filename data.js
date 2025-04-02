@@ -23,7 +23,10 @@ import { Briefcase, Code, Server, Rocket } from "lucide-react";
 
 
 
-import blog from "@/assets/projects/blog-app1.png"
+import blog from "@/assets/projects/blog-app.png"
+import ipl from "@/assets/projects/IPLCricket.png"
+import isro from "@/assets/projects/isroMission.png"
+import kafane from "@/assets/projects/kafane.png"
 
 export const skills = [
   {
@@ -232,42 +235,33 @@ export const experiences = [
 ];
 
 export const projects = [
+
   {
     id: 1,
-    image: blog,
-    name: "Blog app",
-    description: "Using EJS templates and Node.js, hosted on AWS",
-    link: "https://aws.amazon.com/",
+    image: ipl,
+    name: "IPL Cricket Team",
+    description: "Designed an intuitive UI for the IPL Cricket Team project, allowing users to add players and build their own custom teams effortlessly. The interface ensures a seamless experience for managing teams and players.",
+    link: "https://cool-medovik-f71435.netlify.app/",
   },
   {
     id: 2,
-    image: angular,
-    name: "Angular",
-    link: "https://angular.dev/overview",
+    image: isro,
+    name: "ISRO Mission Control",
+    description: "Leveraged React with the Arwes library for a stunning, futuristic UI.Dynamic presentation of mission data, including launch dates, mission names, rocket types, and destinations.",
+    link: "https://magical-capybara-2063e9.netlify.app/",
   },
   {
     id: 3,
-    image: bootstrap,
-    name: "Bootstrap",
-    link: "https://getbootstrap.com/",
+    image: kafane,
+    name: "Medical Management",
+    description: "Leveraged React with the Arwes library for a stunning, futuristic UI.Dynamic presentation of mission data, including launch dates, mission names, rocket types, and destinations.",
+    link: "https://soft-daifuku-0ce60b.netlify.app/",
   },
   {
     id: 4,
-    image: docker,
-    name: "Docker",
-    link: "https://www.docker.com/",
+    image: blog,
+    name: "Blog app",
+    description: "Built a dynamic blog application using Node.js and EJS, featuring user authentication, blog creation, and commenting functionality. Users can sign up, log in, publish blogs, and engage through comments seamlessly.",
+    // link: "https://aws.amazon.com/",
   },
-  {
-    id: 5,
-    image: html,
-    name: "HTML",
-    link: "https://www.w3schools.com/html/",
-  },
-  {
-    id: 6,
-    image: javascript,
-    name: "Java Script",
-    link: "https://www.w3schools.com/js/",
-  },
-
 ];

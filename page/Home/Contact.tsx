@@ -142,9 +142,9 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 px-4 rounded-lg font-medium transition duration-200 ${isSubmitting
-                        ? "bg-blue-600 cursor-not-allowed"
-                        : "bg-blue-600 hover:bg-blue-700"
+                    className={`w-full py-3 px-4 rounded-lg font-medium cursor-pointer transition duration-200 ${isSubmitting
+                      ? "bg-gradient-to-r from-blue-400 to-purple-500 cursor-not-allowed"
+                      : "bg-gradient-to-r from-blue-400 to-purple-500 hover:bg-blue-700"
                       } text-white`}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}

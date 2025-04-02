@@ -46,13 +46,18 @@ export default function Projects() {
                 frontend and backend development, API integrations, cloud
                 computing, and performance optimization.
               </p>
+
+              <h5 className="text-white text-xl mt-4">
+                I'm in the process of integrating all my project links into this website.
+                This will be the first version of my portfolio—stay tuned for more updates!
+              </h5>
             </div>
           </div>
         </div>
         <Slider {...settings}>
           {projects.map((data, i) => (
             <div key={i} className="px-2 flex justify-center">
-              <ProjectsCard img={data.image.src} name={data?.name} description={data?.description} />
+              <ProjectsCard img={data.image.src} name={data?.name} link={data?.link} description={data?.description} />
             </div>
           ))}
         </Slider>

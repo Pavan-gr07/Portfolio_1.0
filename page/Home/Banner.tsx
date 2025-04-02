@@ -77,11 +77,12 @@ export const Banner = () => {
                 solutions!
               </p>
               <button
-                onClick={() => console.log("connect")}
-                className="mt-5 px-6 py-3 text-lg font-bold text-white bg-purple-600 rounded-full hover:bg-purple-700 transition duration-300 flex items-center gap-2  cursor-pointer"
+                onClick={() => (window.location.hash = "#contact")}
+                className="mt-5 px-6 py-3 text-lg font-bold text-white bg-purple-600 rounded-full hover:bg-purple-700 transition duration-300 flex items-center gap-2 cursor-pointer"
               >
                 Let’s Connect <ArrowRight />
               </button>
+
             </div>
 
             {/* <div className="flex justify-center md:justify-end overflow-hidden">
