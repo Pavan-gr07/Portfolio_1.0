@@ -22,11 +22,12 @@ import dart from "@/assets/skills-icons/dart.png";
 import { Briefcase, Code, Server, Rocket } from "lucide-react";
 
 
-
+// Projects
 import blog from "@/assets/projects/blog-app.png"
 import ipl from "@/assets/projects/IPLCricket.png"
 import isro from "@/assets/projects/isroMission.png"
 import kafane from "@/assets/projects/kafane.png"
+import finance from "@/assets/projects/finance.png"
 
 export const skills = [
   {
@@ -245,23 +246,31 @@ export const projects = [
   },
   {
     id: 2,
+    image: finance,
+    name: "Finance Tracker",
+    description: "Personal finance tracker web application as a learning-focused project to apply real-world system design concepts beyond basic CRUD apps",
+    link: "https://finance-tracker.pavangr.xyz/dashboard",
+  },
+  {
+    id: 3,
     image: isro,
     name: "ISRO Mission Control",
     description: "Leveraged React with the Arwes library for a stunning, futuristic UI.Dynamic presentation of mission data, including launch dates, mission names, rocket types, and destinations.",
     link: "https://magical-capybara-2063e9.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     image: kafane,
     name: "Medical Management",
     description: "Leveraged React with the Arwes library for a stunning, futuristic UI.Dynamic presentation of mission data, including launch dates, mission names, rocket types, and destinations.",
     link: "https://soft-daifuku-0ce60b.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     image: blog,
     name: "Blog app",
     description: "Built a dynamic blog application using Node.js and EJS, featuring user authentication, blog creation, and commenting functionality. Users can sign up, log in, publish blogs, and engage through comments seamlessly.",
     // link: "https://aws.amazon.com/",
   },
+
 ];
